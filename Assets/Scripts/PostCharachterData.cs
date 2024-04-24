@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class PostCharachterData : MonoBehaviour
 {
 
+    /*
     public InputField hp;
     public InputField playerName;
     public Button sendPlayerDataButton;
@@ -47,4 +48,5 @@ public class PostCharachterData : MonoBehaviour
             postWebRequest.Dispose();
         }
     }
+    */
 }
