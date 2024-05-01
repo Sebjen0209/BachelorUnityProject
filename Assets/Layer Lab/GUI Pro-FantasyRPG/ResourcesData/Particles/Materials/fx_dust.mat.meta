@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d7d2a7452d9ed416a8047928eecabce3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 170168
+  packageName: GUI Pro - Fantasy RPG
+  packageVersion: 3.0.1
+  assetPath: Assets/Layer Lab/GUI Pro-FantasyRPG/ResourcesData/Particles/Materials/fx_dust.mat
+  uploadId: 650405

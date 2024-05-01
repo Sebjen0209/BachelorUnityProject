@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c1a34536b4c14401f923d1a63b3f3884
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 170168
+  packageName: GUI Pro - Fantasy RPG
+  packageVersion: 3.0.1
+  assetPath: Assets/Layer Lab/GUI Pro-FantasyRPG/Prefabs/Prefabs_Component_Frames/Frame_BasicFrame_Square.prefab
+  uploadId: 650405

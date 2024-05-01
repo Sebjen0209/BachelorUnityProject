@@ -23,10 +23,19 @@ public class FetchCharacterData : MonoBehaviour
                     Debug.Log("DataProcessingError");    
                     break;
                 case UnityWebRequest.Result.Success:
-                    Players[] players = JsonConvert.DeserializeObject<Players[]>(webRequest.downloadHandler.text);
-                    Debug.Log($"Player: {players[1].playerName} {players[1].hp}");
+                    try {
+                        GameManager.Characters[] players = JsonConvert.DeserializeObject<GameManager.Characters[]>(webRequest.downloadHandler.text);
+                        if (players != null && players.Length > 1) {
+                            Debug.Log($"Player: {players[1].Name}, ATK: {players[1].ClassType}");
+                        } else {
+                            Debug.Log("No players data or insufficient players data.");
+                        }
+                    } catch (System.Exception ex) {
+                        Debug.LogError($"Error parsing JSON: {ex.Message}");
+                    }
                     break;
             }
         }
     }
+    
 }

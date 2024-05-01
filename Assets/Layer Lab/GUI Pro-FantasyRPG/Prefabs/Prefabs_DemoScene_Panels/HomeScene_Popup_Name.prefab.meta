@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 56991e17768e94b62acd44225f26fa7f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 170168
+  packageName: GUI Pro - Fantasy RPG
+  packageVersion: 3.0.1
+  assetPath: Assets/Layer Lab/GUI Pro-FantasyRPG/Prefabs/Prefabs_DemoScene_Panels/HomeScene_Popup_Name.prefab
+  uploadId: 650405

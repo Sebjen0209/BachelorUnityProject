@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c6273abe47c584cc29e13a6578aed995
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 170168
+  packageName: GUI Pro - Fantasy RPG
+  packageVersion: 3.0.1
+  assetPath: Assets/Layer Lab/GUI Pro-FantasyRPG/Prefabs/Prefabs_DemoScene_Panels/Panel_CharacterSelect.prefab
+  uploadId: 650405

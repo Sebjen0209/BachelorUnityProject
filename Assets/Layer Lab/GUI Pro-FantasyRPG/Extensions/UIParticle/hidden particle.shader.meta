@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d53c4df52c0314ee8a399496a242de0f
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 170168
+  packageName: GUI Pro - Fantasy RPG
+  packageVersion: 3.0.1
+  assetPath: Assets/Layer Lab/GUI Pro-FantasyRPG/Extensions/UIParticle/hidden particle.shader
+  uploadId: 650405

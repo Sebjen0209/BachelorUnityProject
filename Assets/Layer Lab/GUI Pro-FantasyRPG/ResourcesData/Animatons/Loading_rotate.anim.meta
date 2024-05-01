@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3f5eb3ce00c12487eac31f936321c69a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 170168
+  packageName: GUI Pro - Fantasy RPG
+  packageVersion: 3.0.1
+  assetPath: Assets/Layer Lab/GUI Pro-FantasyRPG/ResourcesData/Animatons/Loading_rotate.anim
+  uploadId: 650405
