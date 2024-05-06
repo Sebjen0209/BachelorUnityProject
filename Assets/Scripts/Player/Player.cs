@@ -4,9 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using Mirror;
 
-public class Player : MonoBehaviour
+[RequireComponent(typeof(NetworkTransformUnreliable))]
+public class Player : NetworkBehaviour
 {
+    private void Update()
+    {
+        if (isLocalPlayer)
+        {
+            PlayerMovement();
+        }
+    }
     [SerializeField] private float movementSpeed = 1f;
     
     private PlayerInputSystem playerInput = null;
@@ -22,11 +31,6 @@ public class Player : MonoBehaviour
     private void OnEnable()
     {
         playerInput.Enable();
-    }
-
-    private void Update()
-    {
-        PlayerMovement();
     }
 
     private void FixedUpdate()
