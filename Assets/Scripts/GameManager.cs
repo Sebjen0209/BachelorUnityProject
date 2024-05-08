@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     
     public List<Characters> CharactersData { get; set; } = new List<Characters>();
     
+    public Characters SelectedCharacter { get; set; }
     
     [System.Serializable]
     public class Characters

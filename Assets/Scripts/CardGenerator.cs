@@ -26,6 +26,12 @@ public class CardGenerator : MonoBehaviour
         GenerateCards();
     }
 
+    public void SelectCharacter(GameManager.Characters character)
+    {
+        GameManager.Instance.SelectedCharacter = character;
+        Debug.Log("Character selected: " + character.Name);
+    }
+    
     private void GenerateCards()
     {
         Debug.Log("Attempting to generate cards. Current data count: " + GameManager.Instance.CharactersData.Count);
@@ -34,7 +40,7 @@ public class CardGenerator : MonoBehaviour
         {
             GameObject newCard = Instantiate(cardPrefab, cardParent);
 
-
+            
             Transform characterInfo = newCard.transform.Find("CaaracterInfo");
             if (characterInfo != null)
             {
@@ -45,7 +51,7 @@ public class CardGenerator : MonoBehaviour
             {
                 Debug.LogError("Child named 'CharacterInfo' not found on the card prefab!");
             }
-
+/*
             Transform characterSelectInfoTop = newCard.transform.Find("CharacterSelectInfoTop");
             if (characterSelectInfoTop != null)
             {
@@ -91,9 +97,19 @@ public class CardGenerator : MonoBehaviour
                     }
                 }
             }
+*/
 
-
-
+            Button cardButton = newCard.GetComponent<Button>();
+            if (cardButton != null)
+            {
+                cardButton.onClick.AddListener(() => SelectCharacter(character));
+            }
+            else
+            {
+                Debug.LogError("Button component not found on card prefab!");
+            }
+            
         }
     }
+    
 }
