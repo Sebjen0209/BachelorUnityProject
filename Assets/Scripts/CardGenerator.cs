@@ -51,7 +51,7 @@ public class CardGenerator : MonoBehaviour
             {
                 Debug.LogError("Child named 'CharacterInfo' not found on the card prefab!");
             }
-/*
+
             Transform characterSelectInfoTop = newCard.transform.Find("CharacterSelectInfoTop");
             if (characterSelectInfoTop != null)
             {
@@ -97,7 +97,7 @@ public class CardGenerator : MonoBehaviour
                     }
                 }
             }
-*/
+
 
             Button cardButton = newCard.GetComponent<Button>();
             if (cardButton != null)
