@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class CharacterSelector : MonoBehaviour
 {
+    public static CharacterSelector Instance { get; private set; }
     public Image characterDisplay;
     public Image characterIcon;
     public TextMeshProUGUI characterDescription;
@@ -15,7 +16,7 @@ public class CharacterSelector : MonoBehaviour
     public Sprite warriorImage;
     public Sprite warriorIcon;
     private string warriorDescription; 
-    
+
     public Sprite sorcererImage;
     public Sprite sorcererIcon;
     private string sorcererDescription; 
@@ -28,8 +29,26 @@ public class CharacterSelector : MonoBehaviour
     public Sprite assassinIcon;
     private string assassinDescription; 
 
+    public string SelectedCharacterType { get; private set; }
+    public string SelectedCharacterName { get; set; } // Placeholder for character name input
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void SetCharacter(string characterType)
     {
+        SelectedCharacterType = characterType;
+        
         switch (characterType)
         {
             case "Warrior":

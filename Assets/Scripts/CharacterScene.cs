@@ -21,7 +21,6 @@ public class CharacterSceneController : MonoBehaviour
         // Construct the URL with the user ID
 
         string apiAccountData = GameManager.Instance.accountApiData;
-        Debug.Log("API Account data" + apiAccountData);
         string formattedApiAccountData = apiAccountData.Split(":")[1].Replace("\"", "").Split("}")[0];
 
         string url = "https://localhost:7124/api/data/" + formattedApiAccountData;
