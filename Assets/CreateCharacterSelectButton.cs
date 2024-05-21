@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using TMPro;
+using Newtonsoft.Json;
 
 public class CreateCharacterSelectButton : MonoBehaviour
 {
@@ -20,19 +21,34 @@ public class CreateCharacterSelectButton : MonoBehaviour
 
     public void CreateCharacter()
     {
-        string accountId = GameManager.Instance.accountApiData.Split(":")[1].Replace("\"", "").Split("}")[0];
+        //string accountId = GameManager.Instance.accountApiData.Split(":")[1].Replace("\"", "").Split("}")[0];
+        string accountId = "5OqEw9sPwKRpNjseUGetEyoLsod2";
         string characterName = characterNameInput.text;
         string characterType = CharacterSelector.Instance.SelectedCharacterType;
 
         StartCoroutine(PostCharacterData(accountId, characterName, characterType));
     }
 
+    public class CharacterData
+    {
+        public string id { get; set; }
+        public string name { get; set; }
+        public string classtype { get; set; }
+    }
+
     IEnumerator PostCharacterData(string accountId, string characterName, string characterType)
     {
-        string jsonBody = $"{{\"id\":\"{accountId}\",\"name\":\"{characterName}\",\"classtype\":\"{characterType}\"}}";
+        CharacterData characterData = new CharacterData
+        {
+            id = accountId,
+            name = characterName,
+            classtype = characterType
+        };
+
+        string jsonBody = JsonConvert.SerializeObject(characterData);
         byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonBody);
 
-        using (UnityWebRequest www = new UnityWebRequest("http://13.60.46.33", "POST"))
+        using (UnityWebRequest www = new UnityWebRequest("http://13.60.46.33/api/data", "POST"))
         {
             www.uploadHandler = new UploadHandlerRaw(bodyRaw);
             www.downloadHandler = new DownloadHandlerBuffer();
@@ -51,3 +67,7 @@ public class CreateCharacterSelectButton : MonoBehaviour
         }
     }
 }
+
+
+
+
